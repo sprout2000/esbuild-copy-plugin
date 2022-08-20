@@ -1,4 +1,5 @@
-test
 node_modules/
+test/2.txt
+coverage/*.json
 .env
 .DS_Store
