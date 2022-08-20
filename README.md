@@ -1,4 +1,7 @@
 # @sprout2000/esbuild-copy-plugin
+![jest](./coverage/badge.svg)
+![GitHub top language](https://img.shields.io/github/languages/top/sprout2000/esbuild-copy-plugin)
+![npm](https://img.shields.io/npm/dt/@sprout2000/esbuild-copy-plugin)
 
 An esbuild plugin to copy static files.
 
