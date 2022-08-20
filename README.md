@@ -5,9 +5,21 @@
 
 An esbuild plugin to copy static files.
 
+## Install
+
+```sh
+npm i -D @sprout2000/esbuild-copy-plugin
+```
+
+_or_
+
+```sh
+yarn add -D @sprout2000/esbuild-copy-plugin
+```
+
 ## Usage
 
-```typescript
+```js
 import { build } from 'esbuild';
 import { copyPlugin } from '@sprout2000/esbuild-copy-plugin';
 
@@ -19,6 +31,23 @@ build({
     }),
   ],
 });
+```
+
+## API
+
+```js
+copyPlugin: (options?: CopyPluginOptions) => Plugin;
+
+CopyPluginOptions: {
+  src?: string;
+  dest?: string;
+  dereference?: boolean
+  errorOnExist?: boolean;
+  filter?: (src, dest) => boolean;
+  force?: boolean;
+  preserveTimestamps?: boolean;
+  recursive?: boolean;
+}
 ```
 
 ## License
