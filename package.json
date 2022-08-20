@@ -34,7 +34,8 @@
     "minify": "run-p minify:*",
     "minify:common": "terser dist/index.js -o dist/index.js -c -m",
     "minify:esm": "terser dist/esm/index.js -o dist/esm/index.js -c -m",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "git config --local core.hooksPath .githooks"
   },
   "devDependencies": {
     "@jest/types": "^28.1.3",
