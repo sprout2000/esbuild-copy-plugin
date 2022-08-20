@@ -8,14 +8,14 @@ interface CopyPluginOptions extends fs.CopySyncOptions {
   dest?: string;
 }
 
-const getDigest = (string: string) => {
+export const getDigest = (string: string) => {
   const hash = crypto.createHash('md5');
   const data = hash.update(string, 'utf-8');
 
   return data.digest('hex');
 };
 
-const getFileDigest = (path: string) => {
+export const getFileDigest = (path: string) => {
   if (!fs.existsSync(path)) {
     return null;
   }
@@ -27,7 +27,7 @@ const getFileDigest = (path: string) => {
   return getDigest(fs.readFileSync(path).toString());
 };
 
-const filter = (src: string, dest: string) => {
+export const filter = (src: string, dest: string) => {
   if (!fs.existsSync(dest)) {
     return true;
   }
