@@ -30,12 +30,23 @@ describe('Test Suites', () => {
   });
 
   test('copyPlugin', async () => {
-    copyPlugin();
+    const tmpDir = path.join(__dirname, '..', 'assets');
+    fs.mkdirSync(tmpDir);
+
+    await build({ plugins: [copyPlugin()] });
 
     const spy = jest.spyOn(fs, 'cpSync');
     await build({
-      plugins: [copyPlugin({ src: './test/1.txt', dest: './test/2.txt' })],
+      plugins: [
+        copyPlugin({
+          src: path.resolve(__dirname, './index.ts'),
+          dest: path.join(tmpDir, 'index.ts'),
+        }),
+      ],
     });
     expect(spy).toHaveBeenCalled();
+
+    fs.unlinkSync(path.join(tmpDir, 'index.ts'));
+    fs.rmdirSync(tmpDir);
   });
 });
