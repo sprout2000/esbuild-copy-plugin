@@ -16,25 +16,15 @@ export const getDigest = (string: string) => {
 };
 
 export const getFileDigest = (path: string) => {
-  if (!fs.existsSync(path)) {
-    return null;
-  }
-
-  if (fs.statSync(path).isDirectory()) {
-    return null;
-  }
+  if (!fs.existsSync(path)) return null;
+  if (fs.statSync(path).isDirectory()) return null;
 
   return getDigest(fs.readFileSync(path).toString());
 };
 
 export const filter = (src: string, dest: string) => {
-  if (!fs.existsSync(dest)) {
-    return true;
-  }
-
-  if (fs.statSync(dest).isDirectory()) {
-    return true;
-  }
+  if (!fs.existsSync(dest)) return true;
+  if (fs.statSync(dest).isDirectory()) return true;
 
   return getFileDigest(src) !== getFileDigest(dest);
 };
