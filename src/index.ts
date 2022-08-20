@@ -33,7 +33,7 @@ export const copyPlugin = (options: CopyPluginOptions = {}): Plugin => ({
   name: 'esbuild-copy-plugin',
   setup(build: PluginBuild) {
     const src = options.src || './assets';
-    const dest = options.dest || '../dist';
+    const dest = options.dest || './dist';
 
     build.onEnd(() =>
       fs.cpSync(src, dest, {
