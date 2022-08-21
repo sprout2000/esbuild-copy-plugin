@@ -3,11 +3,11 @@
 ![GitHub top language](https://img.shields.io/github/languages/top/sprout2000/esbuild-copy-plugin)
 ![npm](https://img.shields.io/npm/dt/@sprout2000/esbuild-copy-plugin)
 
-An esbuild plugin to copy static files.
+An esbuild plugin to copy static files that changed from a source directory to a destination directory.
 
 _* This plugin is a typed and fully tested version of [@nickjj](https://github.com/nickjj)'s [esbuild-copy-static-files](https://github.com/nickjj/esbuild-copy-static-files)._
 
-## Install
+## Installation
 
 ```sh
 npm i -D @sprout2000/esbuild-copy-plugin
@@ -41,9 +41,9 @@ build({
 copyPlugin: (options?: CopyPluginOptions) => Plugin;
 
 CopyPluginOptions: {
-  src?: string;
-  dest?: string;
-  dereference?: boolean
+  src?: string;   // default: './assets'
+  dest?: string;  // default: './dist'
+  dereference?: boolean;
   errorOnExist?: boolean;
   filter?: (src, dest) => boolean;
   force?: boolean;
