@@ -1,6 +1,6 @@
 {
   "name": "@sprout2000/esbuild-copy-plugin",
-  "description": "An esbuild plugin to copy static files",
+  "description": "An esbuild plugin to efficiently copy static files from a source directory to a destination directory",
   "version": "1.0.4",
   "license": "MIT",
   "author": "sprout2000",
