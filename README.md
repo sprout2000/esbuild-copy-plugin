@@ -5,6 +5,8 @@
 
 An esbuild plugin to copy static files.
 
+_* This plugin is a typed and fully tested version of [@nickjj](https://github.com/nickjj)'s [esbuild-copy-static-files](https://github.com/nickjj/esbuild-copy-static-files)._
+
 ## Install
 
 ```sh
@@ -49,8 +51,3 @@ CopyPluginOptions: {
   recursive?: boolean;
 }
 ```
-
-## License
-
-Copyright (c) 2022 sprout2000  
-[MIT](https://github.com/sprout2000/esbuild-copy-plugin/blob/master/LICENSE.md) Licensed
