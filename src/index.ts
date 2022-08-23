@@ -36,6 +36,7 @@ export const copyPlugin = (options: CopyPluginOptions = {}): Plugin => ({
     const dest = options.dest || './dist';
 
     build.onEnd(() =>
+      // https://nodejs.org/api/fs.html#fscpsyncsrc-dest-options
       fs.cpSync(src, dest, {
         dereference: options.dereference || true,
         errorOnExist: options.errorOnExist || false,
