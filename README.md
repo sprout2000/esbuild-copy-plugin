@@ -19,6 +19,8 @@ _or_
 yarn add -D @sprout2000/esbuild-copy-plugin
 ```
 
+_You will need to have [Node.js](https://nodejs.org/) `>=16.7` installed._
+
 ## Usage
 
 ```js
@@ -50,4 +52,16 @@ CopyPluginOptions: {
   preserveTimestamps?: boolean;
   recursive?: boolean;
 }
+```
+
+## Test
+
+```sh
+# clone this repo, and install devDependencies...
+git clone https://github.com/sprout2000/esbuild-copy-plugin.git
+cd esbuild-copy-plugin
+npm install
+
+# run the test
+npm test
 ```
