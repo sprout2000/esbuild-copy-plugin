@@ -23,7 +23,7 @@
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "engines": {
-    "node": ">=14"
+    "node": ">=16"
   },
   "scripts": {
     "compile": "run-s build minify",
