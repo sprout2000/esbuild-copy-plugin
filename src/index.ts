@@ -4,8 +4,8 @@ import crypto from 'node:crypto';
 import { Plugin, PluginBuild } from 'esbuild';
 
 interface CopyPluginOptions extends fs.CopySyncOptions {
-  from?: string;
-  to?: string;
+  src?: string;
+  dest?: string;
 }
 
 export const getDigest = (string: string) => {
@@ -32,8 +32,8 @@ export const filter = (src: string, dest: string) => {
 export const copyPlugin = (options: CopyPluginOptions = {}): Plugin => ({
   name: 'esbuild-copy-plugin',
   setup(build: PluginBuild) {
-    const src = options.from || './assets';
-    const dest = options.to || './dist';
+    const src = options.src || './assets';
+    const dest = options.dest || './dist';
 
     build.onEnd(() =>
       // https://nodejs.org/api/fs.html#fscpsyncsrc-dest-options

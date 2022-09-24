@@ -39,8 +39,8 @@ describe('Test Suites', () => {
     await build({
       plugins: [
         copyPlugin({
-          from: path.resolve(__dirname, './index.ts'),
-          to: path.join(tmpDir, 'index.ts'),
+          src: path.resolve(__dirname, './index.ts'),
+          dest: path.join(tmpDir, 'index.ts'),
         }),
       ],
     });
