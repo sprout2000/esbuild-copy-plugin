@@ -30,8 +30,8 @@ import { copyPlugin } from '@sprout2000/esbuild-copy-plugin';
 build({
   plugins: [
     copyPlugin({
-      from: './assets/icon.png',
-      to: './dist/logo.png',
+      src: './assets/icon.png',
+      dest: './dist/logo.png',
     }),
   ],
 });
@@ -43,8 +43,8 @@ build({
 copyPlugin: (options?: CopyPluginOptions) => Plugin;
 
 CopyPluginOptions: {
-  from?: string;   // default: './assets'
-  to?: string;  // default: './dist'
+  src?: string;   // default: './assets'
+  dest?: string;  // default: './dist'
   dereference?: boolean;
   errorOnExist?: boolean;
   filter?: (src, dest) => boolean;
