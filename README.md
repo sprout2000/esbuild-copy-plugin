@@ -45,14 +45,17 @@ copyPlugin: (options?: CopyPluginOptions) => Plugin;
 CopyPluginOptions: {
   src?: string;   // default: './assets'
   dest?: string;  // default: './dist'
-  dereference?: boolean;
-  errorOnExist?: boolean;
-  filter?: (src, dest) => boolean;
-  force?: boolean;
-  preserveTimestamps?: boolean;
-  recursive?: boolean;
+  dereference?: boolean;  // defalut: false
+  errorOnExist?: boolean;  // default: false
+  filter?: (src, dest) => boolean;  // default: undefined
+  force?: boolean;  // default: true
+  preserveTimestamps?: boolean;  // default: false
+  recursive?: boolean;  // default: false
+  verbatimSymlinks?: boolean;  // default: false
 }
 ```
+
+_See [fs.CopySyncOptions](https://nodejs.org/docs/latest-v16.x/api/fs.html#fscpsyncsrc-dest-options) in Node.js 16.x LTS for more details._
 
 ## Test
 
