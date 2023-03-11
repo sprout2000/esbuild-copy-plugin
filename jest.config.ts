@@ -1,9 +1,9 @@
-import { Config } from '@jest/types';
+import { Config } from "@jest/types";
 
 const config: Config.InitialOptions = {
-  preset: 'ts-jest',
+  preset: "ts-jest",
   collectCoverage: true,
-  coverageReporters: ['text', 'json-summary'],
+  coverageReporters: ["text", "json-summary"],
 };
 
 export default config;

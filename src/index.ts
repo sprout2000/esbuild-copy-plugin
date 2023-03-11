@@ -1,7 +1,7 @@
-import fs from 'node:fs';
-import crypto from 'node:crypto';
+import fs from "node:fs";
+import crypto from "node:crypto";
 
-import { Plugin, PluginBuild } from 'esbuild';
+import { Plugin, PluginBuild } from "esbuild";
 
 interface CopyPluginOptions extends fs.CopySyncOptions {
   src?: string;
@@ -9,10 +9,10 @@ interface CopyPluginOptions extends fs.CopySyncOptions {
 }
 
 export const getDigest = (string: string) => {
-  const hash = crypto.createHash('md5');
-  const data = hash.update(string, 'utf-8');
+  const hash = crypto.createHash("md5");
+  const data = hash.update(string, "utf-8");
 
-  return data.digest('hex');
+  return data.digest("hex");
 };
 
 export const getFileDigest = (path: string) => {
@@ -30,10 +30,10 @@ export const filter = (src: string, dest: string) => {
 };
 
 export const copyPlugin = (options: CopyPluginOptions = {}): Plugin => ({
-  name: 'esbuild-copy-plugin',
+  name: "esbuild-copy-plugin",
   setup(build: PluginBuild) {
-    const src = options.src || './assets';
-    const dest = options.dest || './dist';
+    const src = options.src || "./assets";
+    const dest = options.dest || "./dist";
 
     build.onEnd(() =>
       // https://nodejs.org/api/fs.html#fscpsyncsrc-dest-options
