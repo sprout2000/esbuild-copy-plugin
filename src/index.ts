@@ -36,14 +36,15 @@ export const copyPlugin = (options: CopyPluginOptions = {}): Plugin => ({
     const dest = options.dest || "./dist";
 
     build.onEnd(() =>
-      // https://nodejs.org/api/fs.html#fscpsyncsrc-dest-options
+      // https://nodejs.org/dist/latest-v18.x/docs/api/fs.html
       fs.cpSync(src, dest, {
-        dereference: options.dereference || true,
+        dereference: options.dereference || false,
         errorOnExist: options.errorOnExist || false,
         filter: options.filter || filter,
         force: options.force || true,
-        preserveTimestamps: options.preserveTimestamps || true,
+        preserveTimestamps: options.preserveTimestamps || false,
         recursive: options.recursive || true,
+        verbatimSymlinks: options.verbatimSymlinks || false,
       })
     );
   },
