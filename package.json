@@ -20,7 +20,7 @@
     "dist"
   ],
   "source": "src/index.ts",
-  "main": "dist/main.js",
+  "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "engines": {
