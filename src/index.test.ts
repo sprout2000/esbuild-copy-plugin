@@ -13,7 +13,7 @@ describe("Test Suites", () => {
     expect(getFileDigest(path.resolve(__dirname, "../notexist"))).toBeNull();
     expect(getFileDigest(path.resolve(__dirname, ".."))).toBeNull();
     expect(getFileDigest(path.resolve(__dirname, "./index.ts"))).toMatch(
-      /([a-z]|[0-9]){32}/
+      /([a-z]|[0-9]){32}/,
     );
   });
 
@@ -23,8 +23,8 @@ describe("Test Suites", () => {
     expect(
       filter(
         path.resolve(__dirname, "./index.ts"),
-        path.resolve(__dirname, "./index.ts")
-      )
+        path.resolve(__dirname, "./index.ts"),
+      ),
     ).toBeFalsy();
     expect(filter(__dirname, path.resolve(__dirname, ".."))).toBeTruthy();
   });

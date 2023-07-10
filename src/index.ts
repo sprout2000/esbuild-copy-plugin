@@ -45,7 +45,7 @@ export const copyPlugin = (options: CopyPluginOptions = {}): Plugin => ({
         preserveTimestamps: options.preserveTimestamps || false,
         recursive: options.recursive || true,
         verbatimSymlinks: options.verbatimSymlinks || false,
-      })
+      }),
     );
   },
 });
