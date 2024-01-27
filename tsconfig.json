@@ -7,14 +7,14 @@
     "lib": ["ES2015", "DOM"],
     "types": ["node", "jest"],
     "strict": true,
-    "outDir": "dist"
+    "outDir": "dist",
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.ts"],
   "ts-node": {
     "compilerOptions": {
       "target": "ES2015",
-      "module": "CommonJS"
-    }
-  }
+      "module": "CommonJS",
+    },
+  },
 }
