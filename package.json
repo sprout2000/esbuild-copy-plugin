@@ -11,14 +11,8 @@
   "bugs": {
     "url": "https://github.com/sprout2000/esbuild-copy-plugin/issues"
   },
-  "keywords": [
-    "esbuild",
-    "plugin",
-    "copy"
-  ],
-  "files": [
-    "dist"
-  ],
+  "keywords": ["esbuild", "plugin", "copy"],
+  "files": ["dist"],
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
