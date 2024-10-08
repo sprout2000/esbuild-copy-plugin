@@ -4,13 +4,23 @@
     "module": "CommonJS",
     "moduleResolution": "Node",
     "esModuleInterop": true,
-    "lib": ["ES2015", "DOM"],
-    "types": ["node", "jest"],
+    "lib": [
+      "ES2015",
+      "DOM"
+    ],
+    "types": [
+      "node",
+      "jest"
+    ],
     "strict": true,
     "outDir": "dist"
   },
-  "include": ["src"],
-  "exclude": ["src/**/*.test.ts"],
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/**/*.test.ts"
+  ],
   "ts-node": {
     "compilerOptions": {
       "target": "ES2015",
