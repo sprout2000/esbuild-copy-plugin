@@ -1,7 +1,7 @@
-import fs from "node:fs";
 import crypto from "node:crypto";
+import fs from "node:fs";
 
-import { Plugin, PluginBuild } from "esbuild";
+import type { Plugin, PluginBuild } from "esbuild";
 
 interface CopyPluginOptions extends fs.CopySyncOptions {
   src?: string;

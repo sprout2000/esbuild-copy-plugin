@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { build } from "esbuild";
 
-import { copyPlugin, getDigest, getFileDigest, filter } from ".";
+import { copyPlugin, filter, getDigest, getFileDigest } from ".";
 
 describe("Test Suites", () => {
   test("getDigest()", () => {
