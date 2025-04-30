@@ -1,7 +1,7 @@
 {
   "name": "@sprout2000/esbuild-copy-plugin",
   "description": "An esbuild plugin to efficiently copy static files from a source directory to a destination directory",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "license": "MIT",
   "author": "sprout2000",
   "homepage": "https://github.com/sprout2000/esbuild-copy-plugin#readme",
@@ -11,8 +11,14 @@
   "bugs": {
     "url": "https://github.com/sprout2000/esbuild-copy-plugin/issues"
   },
-  "keywords": ["esbuild", "plugin", "copy"],
-  "files": ["dist"],
+  "keywords": [
+    "esbuild",
+    "plugin",
+    "copy"
+  ],
+  "files": [
+    "dist"
+  ],
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
