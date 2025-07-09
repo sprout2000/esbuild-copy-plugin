@@ -38,13 +38,13 @@ export const copyPlugin = (options: CopyPluginOptions = {}): Plugin => ({
     build.onEnd(() =>
       // https://nodejs.org/dist/latest-v18.x/docs/api/fs.html
       fs.cpSync(src, dest, {
-        dereference: options.dereference ?? false,
-        errorOnExist: options.errorOnExist ?? false,
-        filter: options.filter ?? filter,
-        force: options.force ?? true,
-        preserveTimestamps: options.preserveTimestamps ?? false,
-        recursive: options.recursive ?? true,
-        verbatimSymlinks: options.verbatimSymlinks ?? false,
+        dereference: options.dereference || false,
+        errorOnExist: options.errorOnExist || false,
+        filter: options.filter || filter,
+        force: options.force || true,
+        preserveTimestamps: options.preserveTimestamps || false,
+        recursive: options.recursive || true,
+        verbatimSymlinks: options.verbatimSymlinks || false,
       }),
     );
   },
