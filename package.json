@@ -33,16 +33,16 @@
     "prepare": "git config --local core.hooksPath .githooks"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.1",
-    "@parcel/packager-ts": "^2.15.4",
-    "@parcel/transformer-typescript-types": "^2.15.4",
+    "@biomejs/biome": "2.3.2",
+    "@parcel/packager-ts": "^2.16.0",
+    "@parcel/transformer-typescript-types": "^2.16.0",
     "@types/jest": "^30.0.0",
-    "@types/node": "^22.16.2",
-    "esbuild": "^0.25.6",
-    "jest": "^30.0.4",
-    "parcel": "^2.15.4",
-    "ts-jest": "^29.4.0",
+    "@types/node": "^24.9.2",
+    "esbuild": "^0.25.12",
+    "jest": "^30.2.0",
+    "parcel": "^2.16.0",
+    "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   }
 }
